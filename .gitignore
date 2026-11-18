@@ -1,0 +1,74 @@
+# ==============================================================================
+# 3D Swin-UNETR Brain Tumor Segmentation - Git Ignore
+# ==============================================================================
+
+# --- PyTorch Model Weights & Checkpoints (Exceeds GitHub 100MB File Limit) ---
+# best_brats_model.pth is ~256MB. Download instructions provided in checkpoints/README.md
+*.pth
+*.pt
+*.bin
+*.onnx
+checkpoints/*.pth
+checkpoints/*.pt
+outputs/checkpoints/
+
+# Keep directory structure tracked
+!checkpoints/README.md
+!checkpoints/.gitkeep
+
+# --- Datasets & Medical Archive Archives ---
+# Raw BraTS / Decathlon dataset files
+brats_data/
+Task01_BrainTumour/
+data/Task01_BrainTumour/
+*.tar
+*.tar.gz
+*.zip
+*.7z
+
+# --- Flask Uploads & Temporary Runtimes ---
+uploads/*
+!uploads/.gitkeep
+temp/
+tmp/
+*.tmp
+
+# --- Experiment Tracking & Logs ---
+mlruns/
+wandb/
+runs/
+*.log
+
+# --- Large Screen Recordings & Videos ---
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# --- Python Bytecode & Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- Virtual Environments ---
+venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+
+# --- IDE & Operating System Artifacts ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
